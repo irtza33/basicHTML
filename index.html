@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Irtza Tariq" />
+    <meta name="description" content="This page contains my HTML learnings" />
+    <title>My First Web Page</title>
+    <link rel="icon" href="html5.png" />
+    <link rel="stylesheet" href="main.css" type="text/css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>My goals for the year!</h1>
+      <nav aria-label="primary-navigation">
+        <ul>
+          <li>
+            <a href="#html">Learn HTML</a>
+          </li>
+          <li>
+            <a href="#vacation">Planning a vacation</a>
+          </li>
+          <li>
+            <a href="#contact">Contact Me</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    <main>
+      <section id="html">
+        <h2>Ready to learn HTML</h2>
+        <p>This is my first web page</p>
+        <img
+          src="html5.png"
+          alt="HTML5 logo"
+          title="Learning HTML5"
+          width="512"
+          height="512"
+        />
+        <figure>
+          <figcaption>An example of HTML5 code</figcaption>
+          <p>
+            <code> &lt;h1&gt;Hello World!&lt;/h1&gt; </code>
+          </p>
+        </figure>
+      </section>
+
+      <hr />
+
+      <section id="schedule">
+        <h3>My Daily Schedule</h3>
+        <p>Let me tell you how...</p>
+        <ol>
+          <li>&nbsp;&nbsp;&nbsp;... I learn about webdev.</li>
+          <li>&nbsp;&nbsp;&nbsp;...I plan out my Schedule.</li>
+          <li>
+            &nbsp;&nbsp;&nbsp;... I study from
+            <abbr title="W3 Schools"
+              ><a href="https://www.w3schools.com/">W3</a> </abbr
+            >.
+          </li>
+          <li>&nbsp;&nbsp;&nbsp;...I go to sleep.</li>
+        </ol>
+        <aside>
+          <details>
+            <summary>
+              <strong>But guess what?</strong>
+            </summary>
+            <p>I procrastinate a lot as well</p>
+          </details>
+        </aside>
+        <br />
+        <table>
+          <caption>
+            My Daily Schedule
+          </caption>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Activity</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>
+              <time datetime="08:00">8 AM</time> -
+              <time datetime="11:00">11 AM</time>
+            </td>
+            <td>Write Code</td>
+          </tr>
+          <tr>
+            <td>
+              <time datetime="11:00">11 AM</time> -
+              <time datetime="12:00">12 PM</time>
+            </td>
+            <td>Lunch</td>
+          </tr>
+          <tr>
+            <td>
+              <time datetime="12:00">12 PM</time> -
+              <time datetime="17:00">5 PM</time>
+            </td>
+            <td>Study for AWS exam</td>
+          </tr>
+          <tr>
+            <td rowspan="2">All the other times of day</td>
+            <td>Free Time</td>
+          </tr>
+          <tr>
+            <td>Sleep</td>
+          </tr>
+        </table>
+      </section>
+
+      <hr />
+
+      <section id="vacation">
+        <h2>I am also planning a vacation</h2>
+        <p>I really <em>need a vacation.</em></p>
+
+        <h3>Places I'd like to visit</h3>
+        <ul>
+          <li>
+            <p>
+              I have heard good things about <abbr title="Dubai">DXB</abbr>.
+            </p>
+          </li>
+          <li>
+            <p>I've heard good things about going here:</p>
+            <address>
+              Al-Tijara Center<br />
+              Shahrah-e-Faisal<br />
+              Karachi
+            </address>
+          </li>
+        </ul>
+        <!-- TODO: THIS IS A COMMENT-->
+        <h3>Places I want to avoid</h3>
+        <dl>
+          <dt>North Pole</dt>
+          <dd>I hear this is <strong>cold</strong>!</dd>
+
+          <dt>South Pole</dt>
+          <dd>This is also <strong>cold</strong>!</dd>
+
+          <dt>Mountain Tops</dt>
+          <dd>These are also...<em>hint hint...</em> also very cold</dd>
+        </dl>
+      </section>
+
+      <hr />
+      <article id="contact">
+        <h2>Contact Me</h2>
+        <p>I'd really like to hear from you!</p>
+        <form action="https://httpbin.org/get" method="get">
+          <fieldset>
+            <legend>Personal Information</legend>
+            <p>
+              <label for="firstName">First Name:</label>
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                placeholder="Irtza"
+                autocomplete="on"
+                required
+              />
+            </p>
+            <p>
+              <label for="lastName">Last Name:</label>
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                placeholder="Tariq"
+                autocomplete="on"
+                required
+              />
+            </p>
+            <p>
+              <label for="password">Password:</label>
+              <input type="password" name="password" id="password" required />
+            </p>
+            <p>
+              <label for="phone">Phone Number:</label>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                pattern="[0-9]{4}[0-9]{3}[0-9]{4}"
+                required
+              />
+            </p>
+            <p>
+              <label for="coffee">Favourite Coffee</label>
+              <select name="coffee" id="coffee">
+                <optgroup label="Milk">
+                  <option value="latte">Latte</option>
+                  <option value="mocha">Mocha</option>
+                </optgroup>
+                <optgroup label="No Milk">
+                  <option value="black">Americano</option>
+                </optgroup>
+              </select>
+            </p>
+          </fieldset>
+          <br>
+          <fieldset>
+            <legend>What do you like to eat?</legend>
+            <input type="radio" name="food" id="pizza" value="pizza">
+            <label for="pizza">Pizza</label>
+            <input type="radio" name="food" id="zinger" value="zinger">
+            <label for="zinger">Zinger</label>
+          </fieldset>
+          <br>
+          <fieldset>
+            <legend>What pets do you like?</legend>
+            <p>
+                <input type="checkbox" name="pets" id="dog" name="dog" value="dog">
+                <label for="dog">Dog</label>
+            </p>
+            <p>
+                <input type="checkbox" name="pets" id="cat" name="cat" value="cat">
+                <label for="cat">Cat</label>
+            </p>
+          </fieldset>
+          <br>
+          <fieldset>
+            <legend>Leave a note</legend>
+            <label for="message">Your Note:</label>
+            <br>
+            <textarea name="message" id="message" cols="50" rows="7"></textarea>
+          </fieldset>
+          <br>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </form>
+      </article>
+    </main>
+
+    <hr />
+    <footer>
+      <p>
+        &lt;&lt;&lt; &copy; <a href="about.html">Irtza Tariq</a> &gt;&gt;&gt;
+      </p>
+      <p>
+        <a href="#">Back to Top</a>
+      </p>
+    </footer>
+  </body>
+</html>
